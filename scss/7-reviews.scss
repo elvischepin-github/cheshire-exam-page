@@ -1,0 +1,77 @@
+main.container-reviews {
+    background: white;
+    min-height: 800px;
+    max-width: 1920px;
+    margin: auto;
+    margin-top: 80px;
+
+    div.reviews-top {
+        @include flex-center;
+        flex-direction: column;
+        p {
+            font-size: 2em;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-align: center;
+            padding-top: 80px;
+            padding-bottom: 30px;
+            height: 30px;
+        }
+        hr {
+            height: 2px;
+            background: $blue;
+            border: none;
+            width: 80px;
+            margin: 60px 0;
+        }
+    }
+    .swiper {
+        max-width: 1000px;
+        height: 400px;
+        .swiper-wrapper {
+            .swiper-slide {
+                position: relative;
+                p {
+                    position: relative;
+                    background: $blue;
+                    color: white;
+                    text-align: left;
+                    padding: 25px;
+                    line-height: 22px;
+                    border-radius: 15px;
+                    margin-bottom: 20px;
+                    &::before {
+                        position: absolute;
+                        content: "";
+                        top: 192px;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 3px;
+                        transform: rotate(45deg);
+                        background: $blue;
+                    }
+                }
+            }
+            label#name {
+                position: absolute;
+                top: 240px;
+                left: 80px;
+                font-size: 1.2em;
+            }
+            label#profession {
+                position: absolute;
+                top: 265px;
+                left: 80px;
+                color: $darkGrey;
+            }
+        }
+        .swiper-pagination-bullet {
+            background: $orangish;
+
+            width: 15px;
+            height: 15px;
+        }
+        .swiper-pagination {
+        }
+    }
+}

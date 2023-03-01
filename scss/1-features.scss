@@ -1,0 +1,195 @@
+main.container-features {
+    position: relative;
+    background: url(../images/city.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 1080px;
+    max-width: 1920px;
+    margin: auto;
+    div.overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        // left side legend
+        section.container-intro-form {
+            width: 100%;
+            height: 100%;
+            @include flex-center;
+            div.containter-intro {
+                margin: 50px;
+                color: white;
+                margin-bottom: 30px;
+                img {
+                    margin-bottom: 20px;
+                    width: 325px;
+                }
+                p.quote {
+                    line-height: 50px;
+                    letter-spacing: 2px;
+                    font-weight: bold;
+                    font-size: 2.5em;
+                    margin-bottom: 30px;
+                }
+                hr {
+                    width: 85px;
+                    height: 3px;
+                    background: white;
+                    margin-bottom: 50px;
+                }
+                p {
+                    line-height: 30px;
+                    font-size: 1.2em;
+                }
+                button {
+                    @include box-shadow;
+                    border: 3px solid white;
+                    font-size: 1.1em;
+                    color: white;
+                    background: none;
+                    width: 175px;
+                    height: 50px;
+                    margin-top: 50px;
+                    transition: 0.8s cubic-bezier(0.6, 0.04, 0.98, 0.34);
+
+                    &:hover {
+                        cursor: pointer;
+                        box-shadow: 0 0 3px 1px white;
+                        scale: 1.5;
+                    }
+                }
+            }
+            // right side form
+            div.container-form {
+                @include box-shadow;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background: white;
+                width: 450px;
+                height: 450px;
+                border-radius: 5px;
+                animation: bouncing 2s infinite alternate;
+                @keyframes bouncing {
+                    from {
+                        transform: translateY(0);
+                    }
+
+                    to {
+                        transform: translateY(10px);
+                    }
+                }
+
+                div.form-top {
+                    @include flex-center;
+                    letter-spacing: 2px;
+                    font-size: 1.4em;
+                    font-weight: bold;
+                    background: $grey;
+                    text-align: center;
+                    height: 65px;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    span {
+                        color: $orange;
+                        margin: 0 5px;
+                    }
+                }
+                div.form-middle {
+                    form {
+                        #monthly,
+                        #yearly {
+                            margin-right: 0;
+                        }
+                        padding-bottom: 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        font-size: 1.1em;
+                        p {
+                            font-weight: bold;
+                            font-size: 1.1em;
+                            margin: 15px 0;
+                            margin-left: 60px;
+                            margin-right: 60px;
+                        }
+                        input {
+                            border: none;
+                            border-bottom: 2px solid $grey;
+                            margin-top: 5px;
+                            margin-bottom: 30px;
+                            width: 75%;
+                            margin-left: 60px;
+                            margin-right: 60px;
+                        }
+                        div.radio {
+                            display: flex;
+                            flex-direction: row;
+                            margin-right: 50px;
+                            input[type="radio"] {
+                                appearance: none;
+                                width: 20px;
+                                height: 20px;
+                                border: 3px solid $green;
+                                border-radius: 20px;
+                                position: relative;
+                                &:checked + label {
+                                    color: black;
+                                    font-weight: bold;
+                                }
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    width: 8px;
+                                    height: 8px;
+                                    top: 0;
+                                    right: 0;
+                                    left: 0;
+                                    bottom: 0;
+                                    margin: auto;
+                                    background: $green;
+                                    border-radius: 20px;
+                                    transform: scale(0);
+                                    transition: 0.3s;
+                                }
+                                &:checked::before {
+                                    transform: scale(1);
+                                }
+                            }
+                            label {
+                                margin-left: 10px;
+                                margin-right: 10px;
+                                margin-top: 7px;
+                                font-size: 0.7em;
+                            }
+                        }
+                    }
+                    div.form-bottom {
+                        @include flex-center;
+                        height: 65px;
+                        width: 100%;
+                        text-align: center;
+                        border-bottom-left-radius: 5px;
+                        border-bottom-right-radius: 5px;
+                        background: $green;
+                        #get-started {
+                            color: white;
+                            letter-spacing: 2px;
+                            font-size: 1.4em;
+                            border: none;
+                            background: transparent;
+                            width: 100%;
+                            height: 100%;
+                            margin: 0;
+                            transition: 0.3s;
+                            &:hover {
+                                cursor: pointer;
+                                box-shadow: 0 0 3px 1px $green;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

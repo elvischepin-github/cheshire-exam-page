@@ -1,0 +1,125 @@
+main.container-contact {
+    background: $orangish;
+    min-height: 768px;
+    max-width: 1920px;
+    margin: auto;
+    div.contact-top {
+        @include flex-center;
+        flex-direction: column;
+        color: white;
+        p:nth-of-type(1) {
+            font-size: 2em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            padding-top: 90px;
+            padding-bottom: 60px;
+        }
+        p:nth-of-type(2) {
+            letter-spacing: 1px;
+            font-size: 1.1em;
+        }
+    }
+    div.contact-bottom {
+        @include flex-center;
+        form {
+            animation: sideBounce 2s infinite alternate-reverse;
+            @keyframes sideBounce {
+                from {
+                    transform: translateY(0);
+                }
+
+                to {
+                    transform: translateY(20px);
+                }
+            }
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            padding: 40px 0;
+            background: white;
+            border-radius: 5px;
+            height: 400px;
+            width: 450px;
+            padding-bottom: 0;
+            font-size: 1.1em;
+            @include flex-center;
+            @include box-shadow;
+            #personal,
+            #company {
+                margin-right: 0;
+            }
+            p {
+                font-weight: bold;
+                font-size: 1.1em;
+                margin: 15px 0;
+                margin-left: 60px;
+                margin-right: 60px;
+            }
+            input {
+                border: none;
+                border-bottom: 3px solid $grey;
+                margin-top: 5px;
+                margin-bottom: 30px;
+                width: 60%;
+                font-size: 0.9em;
+            }
+            input#contact-button {
+                background: $green;
+                border-radius: 10px;
+                border-bottom: none;
+                color: white;
+                width: 200px;
+                height: 60px;
+                margin: 0;
+                margin-top: 20px;
+                padding: 10px;
+                transition: 0.3s;
+                &:hover {
+                    cursor: pointer;
+                    box-shadow: 0 0 3px 1px $green;
+                }
+            }
+            div.radio {
+                display: flex;
+                flex-direction: row;
+                margin-right: 50px;
+                input[type="radio"] {
+                    appearance: none;
+                    width: 17px;
+                    height: 17px;
+                    border: 3px solid $green;
+                    border-radius: 20px;
+                    position: relative;
+                    &:checked + label {
+                        color: black;
+                        font-weight: bold;
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 8px;
+                        height: 8px;
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                        bottom: 0;
+                        margin: auto;
+                        background: $green;
+                        border-radius: 20px;
+                        transform: scale(0);
+                        transition: 0.3s;
+                    }
+                    &:checked::before {
+                        transform: scale(1);
+                    }
+                }
+                label {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    margin-top: 7px;
+                    font-size: 0.7em;
+                }
+            }
+        }
+    }
+}

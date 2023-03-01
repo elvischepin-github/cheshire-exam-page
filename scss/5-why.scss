@@ -1,0 +1,84 @@
+main.container-why {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    min-height: 687px;
+    max-width: 1920px;
+    margin: auto;
+    // top
+    div.top-div-title {
+        @include flex-center;
+        flex-direction: column;
+        h2 {
+            letter-spacing: 5px;
+            font-size: 2.6em;
+        }
+        hr {
+            height: 2px;
+            background: $orangish;
+            border: none;
+            width: 80px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        p {
+            color: $darkGrey;
+            letter-spacing: 1px;
+            padding-bottom: 20px;
+        }
+    }
+    // bottom
+    div.bottom-div-points {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        gap: 100px;
+        animation: bouncing 2s infinite alternate-reverse;
+        @keyframes bouncing {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(10px);
+            }
+        }
+        p:nth-of-type(1) {
+            font-size: 1.4em;
+            text-align: center;
+            padding: 10px 0;
+        }
+        p:nth-of-type(2) {
+            text-align: center;
+            line-height: 25px;
+            width: 300px;
+            color: $darkGrey;
+        }
+        img {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            top: 14px;
+            left: 14px;
+        }
+        div.award,
+        div.lotus,
+        div.visa {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        div.image-box-award,
+        div.image-box-lotus,
+        div.image-box-visa {
+            position: relative;
+            border: 1px solid $hotOrange;
+            border-radius: 100px;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+    }
+}

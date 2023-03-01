@@ -1,0 +1,119 @@
+footer.container-about-footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: $blackish;
+    min-height: 687px;
+    max-width: 1920px;
+    margin: auto;
+    div.image-box-left {
+        img {
+            width: 500px;
+        }
+    }
+    aside.side-box-right {
+        width: 550px;
+        color: rgb(200, 200, 200);
+        div.first-aside-div {
+            h3 {
+                color: white;
+                letter-spacing: 4px;
+                line-height: 50px;
+                font-size: 2.3em;
+            }
+            hr {
+                height: 2px;
+                background: $orangish;
+                border: none;
+                width: 300px;
+                margin: 40px 0;
+            }
+            p {
+                margin-bottom: 50px;
+                line-height: 25px;
+            }
+        }
+        div.second-aside-div {
+            animation: bouncing 2s infinite alternate;
+
+            @keyframes bouncing {
+                from {
+                    transform: translateY(0);
+                }
+
+                to {
+                    transform: translateY(10px);
+                }
+            }
+            line-height: 20px;
+            div.eye-container {
+                display: flex;
+                margin-bottom: 40px;
+
+                div.image-eye-div {
+                    background: $orangish;
+                    position: relative;
+                    height: 60px;
+                    width: 101px;
+                    margin: 0;
+                    border-radius: 100%;
+                    img {
+                        position: absolute;
+                        left: 13px;
+                        top: 13px;
+                        height: 35px;
+                        width: 35px;
+                    }
+                }
+                div.text-eye-div {
+                    margin-left: 30px;
+                    h5 {
+                        font-size: 1.1em;
+                        margin-bottom: 10px;
+                    }
+                    p {
+                        line-height: 25px;
+                    }
+                }
+            }
+            div.chat-container {
+                animation: bouncing 2s infinite alternate;
+                @keyframes bouncing {
+                    from {
+                        transform: translateY(0);
+                    }
+
+                    to {
+                        transform: translateY(10px);
+                    }
+                }
+                display: flex;
+                div.image-chat-div {
+                    background: $orangish;
+                    position: relative;
+                    height: 60px;
+                    width: 175px;
+                    margin: 0;
+                    border-radius: 100%;
+                    img {
+                        position: absolute;
+                        left: 13px;
+                        top: 13px;
+                        height: 35px;
+                        width: 35px;
+                    }
+                }
+                div.text-chat-div {
+                    margin-left: 30px;
+                    h5 {
+                        font-size: 1.1em;
+                        margin-bottom: 10px;
+                    }
+                    p {
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+    }
+}

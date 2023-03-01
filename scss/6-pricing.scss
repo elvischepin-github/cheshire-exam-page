@@ -1,0 +1,215 @@
+main.container-pricing {
+    background: $blue;
+    min-height: 900px;
+    max-width: 1920px;
+    margin: auto;
+    div.div-pricing-top {
+        @include flex-center;
+        flex-direction: column;
+        p:nth-of-type(1) {
+            color: white;
+            font-size: 2.3em;
+            font-weight: bold;
+            letter-spacing: 5px;
+            padding-top: 100px;
+        }
+        hr {
+            height: 2px;
+            background: $green;
+            border: none;
+            width: 80px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        p:nth-of-type(2) {
+            color: white;
+            letter-spacing: 1px;
+        }
+    }
+    div.div-pricing-bottom {
+        display: flex;
+        justify-content: space-around;
+        padding: 100px 0;
+        div.pricing-basic {
+            width: 410px;
+            border-radius: 5px;
+            div.price-basic {
+                @include box-shadow;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                background: $greyish;
+                text-align: center;
+                p:nth-of-type(1) {
+                    padding-top: 20px;
+                    color: white;
+                    font-size: 1.3em;
+                }
+                p:nth-of-type(2) {
+                    color: white;
+                    font-size: 7em;
+                }
+                span {
+                    font-size: 0.4em;
+                }
+                p:nth-of-type(3) {
+                    padding: 20px 0;
+                    color: $darkGrey;
+                }
+            }
+            div.green-bar-basic {
+                text-align: center;
+                background: $green;
+                color: transparent;
+                padding: 0;
+                transition: 0.3s;
+
+                &:hover {
+                    color: white;
+                    text-shadow: 0 0 5px white;
+                    padding: 10px 0;
+                }
+            }
+            div.list-basic {
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+                background: white;
+                p:nth-of-type(1) {
+                    padding-top: 5px;
+                }
+                p {
+                    text-align: center;
+                    color: $darkGrey;
+                    letter-spacing: 2px;
+                    line-height: 45px;
+                }
+            }
+            transition: 0.3s;
+            &:hover {
+                transform: matrix(1, -0.03, 0, 1, 0, 0);
+                scale: 1.1;
+            }
+        }
+
+        div.pricing-professional {
+            width: 410px;
+            border-radius: 5px;
+            div.price-professional {
+                @include box-shadow;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                background: $greyish;
+                text-align: center;
+                p:nth-of-type(1) {
+                    padding-top: 20px;
+                    color: white;
+                    font-size: 1.3em;
+                }
+                p:nth-of-type(2) {
+                    color: white;
+                    font-size: 7em;
+                }
+                span {
+                    font-size: 0.4em;
+                }
+                p:nth-of-type(3) {
+                    padding: 20px 0;
+
+                    color: $darkGrey;
+                }
+            }
+            div.green-bar-professional {
+                text-align: center;
+                background: $green;
+                color: white;
+                padding: 10px 0;
+                transition: 0.3s;
+
+                &:hover {
+                    text-shadow: 0 0 5px white;
+                    padding: 20px 0;
+                    font-size: 1.2em;
+                    color: white;
+                }
+            }
+            div.list-professional {
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+                background: white;
+                p:nth-of-type(1) {
+                    padding-top: 5px;
+                }
+                p {
+                    text-align: center;
+                    color: $darkGrey;
+                    letter-spacing: 2px;
+                    line-height: 45px;
+                }
+            }
+            transition: 0.3s;
+            &:hover {
+                scale: 1.2;
+            }
+        }
+        div.pricing-enterprise {
+            width: 410px;
+            border-radius: 5px;
+            div.price-enterprise {
+                @include box-shadow;
+                border-top-right-radius: 5px;
+                border-top-left-radius: 5px;
+                background: $greyish;
+                text-align: center;
+                p:nth-of-type(1) {
+                    padding-top: 20px;
+                    color: white;
+                    font-size: 1.3em;
+                }
+                p:nth-of-type(2) {
+                    color: white;
+                    font-size: 7em;
+                }
+                span {
+                    font-size: 0.4em;
+                }
+                p:nth-of-type(3) {
+                    padding: 20px 0;
+
+                    color: $darkGrey;
+                }
+            }
+            div.green-bar-enterprise {
+                text-align: center;
+                background: $green;
+                color: white;
+                color: transparent;
+                padding: 0;
+                transition: 0.3s;
+
+                &:hover {
+                    color: white;
+                    text-shadow: 0 0 5px white;
+                    padding: 10px 0;
+                }
+            }
+            div.list-enterprise {
+                border-bottom-right-radius: 5px;
+                border-bottom-left-radius: 5px;
+                background: white;
+                p:nth-of-type(1) {
+                    padding-top: 5px;
+                }
+                p {
+                    text-align: center;
+                    color: $darkGrey;
+                    letter-spacing: 2px;
+                    line-height: 45px;
+                }
+            }
+            transition: 0.3s;
+            &:hover {
+                transform: matrix(1, 0.03, 0, 1, 0, 0);
+                scale: 1.1;
+            }
+        }
+    }
+}

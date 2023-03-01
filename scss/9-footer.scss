@@ -1,0 +1,28 @@
+main.container-footer {
+    background: $blackish;
+    height: 115px;
+    max-width: 1920px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    div.footer-logos {
+        display: flex;
+        // flex-grow: 2;
+        img {
+            width: 30px;
+            height: 30px;
+            margin-right: 100px;
+            transition: 0.3s;
+            &:hover {
+                cursor: pointer;
+                scale: 1.2;
+            }
+        }
+    }
+    div.footer-corp {
+        // flex-shrink: 1;
+        display: flex;
+        color: gray;
+    }
+}

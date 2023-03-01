@@ -1,0 +1,63 @@
+header {
+    position: fixed;
+    z-index: 999;
+    background: black;
+    height: 80px;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    img {
+        padding: 10px 0 10px 0;
+    }
+    section.container-menu {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        a {
+            color: $darkGrey;
+            transition: 0.3s;
+            position: relative;
+            &:hover {
+                color: white;
+            }
+            &::before {
+                transition: 0.5s;
+            }
+            &:hover::before {
+                position: absolute;
+                content: "";
+                background-color: $hotOrange;
+                width: 105%;
+                height: 3px;
+                top: 49.5px;
+            }
+            &::after {
+                opacity: 0;
+            }
+            &:hover::after {
+                position: absolute;
+                content: "";
+                background-color: $hotOrange;
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+                right: 40%;
+                bottom: 16px;
+                opacity: 100%;
+
+                animation: menu 0.3s infinite alternate;
+                @keyframes menu {
+                    from {
+                        transform: translateY(0);
+                    }
+
+                    to {
+                        transform: translateY(-10px);
+                    }
+                }
+            }
+        }
+    }
+}

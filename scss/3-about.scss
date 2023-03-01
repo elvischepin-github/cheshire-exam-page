@@ -1,0 +1,163 @@
+main.container-about {
+    @include inner-shadow;
+    position: relative;
+    background: url(../images/desert.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    min-height: 768px;
+    max-width: 1920px;
+    margin: auto;
+    div.overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(125deg, rgba(246, 123, 90, 0.4) 0%, rgba(61, 126, 230, 0.4) 100%);
+        section.container-tabs-images {
+            display: flex;
+            gap: 60px;
+            margin: 100px;
+            div.container-tabs {
+                display: flex;
+                flex-direction: column;
+                button {
+                    color: rgba(183, 183, 183, 0.667);
+                    background: rgba(227, 153, 132, 0.23);
+                    border-radius: 1px;
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(11.3px);
+                    -webkit-backdrop-filter: blur(11.3px);
+                    min-width: 150px;
+                    height: 150px;
+                    border: none;
+                    transition: 0.3s;
+                    margin-bottom: 20px;
+                    animation: glow 0.9s infinite alternate-reverse;
+                    @keyframes glow {
+                        from {
+                            box-shadow: none;
+                        }
+
+                        to {
+                            box-shadow: 0 0 20px $orangish;
+                        }
+                    }
+
+                    &:hover {
+                        cursor: alias;
+                        background: $orange;
+                        @include box-shadow;
+                    }
+                    p {
+                        transform: rotate(-45deg);
+                        font-size: 1.8em;
+                        font-weight: bold;
+                    }
+                }
+                button.selected {
+                    background: $hotOrange;
+                    color: white;
+                    @include box-shadow;
+                }
+            }
+            div.added-tabs {
+                display: flex;
+                flex-direction: column;
+                color: white;
+                h3 {
+                    margin-top: 30px;
+                    font-size: 3em;
+                    letter-spacing: 3px;
+                    line-height: 60px;
+                    margin-bottom: 50px;
+                }
+                p {
+                    font-size: 1.3em;
+                    line-height: 35px;
+                }
+            }
+            div.container-images {
+                div.top-shelf {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        @include box-shadow;
+                        width: 250px;
+                        margin: 10px 10px;
+                    }
+                    div.lettuce-relative-box {
+                        position: relative;
+                        div.lettuce-overlay {
+                            position: absolute;
+                            @include flex-center;
+                            color: white;
+                            font-size: 3em;
+                            top: 9px;
+                            left: 9px;
+                            width: 93.5%;
+                            height: 92%;
+                            background: $hotOrange;
+                            opacity: 0;
+                            transition: 0.3s;
+                            &:hover {
+                                opacity: 80%;
+                                cursor: context-menu;
+                            }
+                        }
+                    }
+                    div.veggies-relative-box {
+                        position: relative;
+                        div.veggies-overlay {
+                            position: absolute;
+                            @include flex-center;
+                            color: white;
+                            font-size: 3em;
+                            top: 9px;
+                            left: 9px;
+                            width: 93.5%;
+                            height: 92%;
+                            background: $hotOrange;
+                            opacity: 0;
+                            transition: 0.3s;
+                            &:hover {
+                                opacity: 80%;
+                                cursor: context-menu;
+                            }
+                        }
+                    }
+                }
+                div.bottom-shelf {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+
+                    img {
+                        @include box-shadow;
+                        width: 520px;
+                        margin: 10px 20px;
+                    }
+                    div.stairs-overlay {
+                        position: absolute;
+                        @include flex-center;
+                        color: white;
+                        font-size: 3em;
+                        top: 10px;
+                        width: 93%;
+                        height: 93%;
+                        background: $hotOrange;
+                        opacity: 0;
+                        transition: 0.3s;
+                        &:hover {
+                            opacity: 80%;
+                            cursor: context-menu;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
